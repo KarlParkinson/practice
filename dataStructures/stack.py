@@ -12,6 +12,12 @@ class Stack:
     def size(self):
         return len(self.items)
 
+    def peek(self):
+        return self.items[self.size()-1]
+
+    def isEmpty(self):
+        return self.size() == 0
+
 
 
 class MinStack(Stack):
@@ -36,7 +42,7 @@ class MinStack(Stack):
         return i
 
 
-
+"""
 s = MinStack()
 s.push(5)
 s.push(9)
@@ -44,3 +50,4 @@ s.push(3)
 print(s.getMinimum()) # should be 3
 s.pop()
 print(s.getMinimum()) # should be 5
+"""
